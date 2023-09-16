@@ -253,3 +253,12 @@ To fix it under macOS, we recommend installing OpenJDK through homebrew
 ```sh
 brew install --cask adoptopenjdk16
 ```
+
+### Exception in thread "main" java.lang.reflect.InvocationTargetException
+
+This exception is happening in Mac M2 chip and still not able to fix at the moment.
+Looks like Rosetta 2 is not being able to run on the x86_64 architecture from arm64:  `incompatible architecture (have 'x86_64', need 'arm64'))`
+This is despite running `arch -x86_64 /usr/bin/env /bin/bash -l` to switch to a `x86_64` arch.
+
+Running the codes on Mac M2.
+
